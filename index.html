@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness.AI</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="c:\Users\davi\Downloads\Fitness.AI.png" height="150" width="150" alt="Fitness.AI" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Adicionando a barra de pesquisa no header -->
+        <form class="search-form" id="search-form" onsubmit="searchProducts(event)">
+            <input type="text" id="search-input" placeholder="Pesquise um produto..." />
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <div class="banner-text">
+            <h2>Encontre seus produtos fitness aqui!</h2>
+            <p>Seus produtos fitness com os melhores treinos para você fazer na academia ou em sua própria casa!</p>
+            <a href="#produtos" class="btn">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="produtos" id="produtos">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="produto-card" data-name="Treino de BodyBuilder na Academia">
+                <h3>Treino de BodyBuilder na Academia</h3>
+                <p>Seu treino para adquirir um corpo de um bodybuilder está aqui!</p>
+                <a href="https://bit.ly/40ELwtT" class="btn">Compre aqui por R$ 9,90</a>
+            </div>
+            <div class="produto-card" data-name="Treino de BodyBuilder em Casa">
+                <h3>Treino de BodyBuilder em Casa</h3>
+                <p>Seu treino para adquiri um corpo de um bodybuilder sem precisar ir a uma academia está aqui!</p>
+                <a href="https://bit.ly/4aNM1WV" class="btn">Compre aqui por R$ 9,90</a>
+            </div>
+            <div class="produto-card" data-name="Em Breve!">
+                <h3>Em Breve!</h3>
+                <p>Em Breve!</p>
+                <a href="#" class="btn">Em Breve!</a>
+            </div>
+            <div class="produto-card" data-name="Em Breve!">
+                <h3>Em Breve!</h3>
+                <p>Em Breve!</p>
+                <a href="#" class="btn">Em Breve!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <p>&copy; e-mail:davifitnessai@gmail.com | +55 (88) 99723-5688</p>
+    </footer>
+
+    <!-- Script para pesquisa -->
+    <script>
+        function searchProducts(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById("search-input").value.toLowerCase();
+            const productCards = document.querySelectorAll(".produto-card");
+
+            productCards.forEach(card => {
+                const productName = card.getAttribute("data-name").toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    card.style.display = "block"; // Exibe o produto
+                } else {
+                    card.style.display = "none"; // Oculta o produto
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
