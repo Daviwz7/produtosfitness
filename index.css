@@ -1,0 +1,181 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+}
+
+/* Header */
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Banner */
+.banner {
+    background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner-text h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+/* Produtos */
+.produtos {
+    padding: 40px 0;
+    background-color: black;
+    text-align: center;
+}
+
+.produtos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título dos produtos */
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Usando Grid para organizar os produtos de forma responsiva */
+.produto-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;  /* Espaçamento entre os cards */
+    justify-items: center;
+}
+
+.produto-card {
+    width: 100%;  /* Garantir que o card ocupe 100% do espaço disponível */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produto-card h3 {
+    font-size: 24px;
+    margin: 20px 0;
+    color: black;
+}
+
+.produto-card p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .produto-list {
+        grid-template-columns: repeat(2, 1fr);  /* Dois itens por linha em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .produto-list {
+        grid-template-columns: 1fr;  /* Um item por linha em telas muito pequenas */
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Formulário de Pesquisa */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Distância do topo */
+}
+
+.search-form input {
+    width: 400px; /* Largura maior para o campo de pesquisa */
+    padding: 15px; /* Espaçamento interno maior */
+    font-size: 18px; /* Tamanho maior da fonte */
+    border: 2px solid #ccc; /* Borda clara */
+    border-radius: 30px; /* Bordas arredondadas */
+    outline: none; /* Remove a borda padrão de foco */
+}
+
+.search-form input:focus {
+    border-color: red; /* Muda a cor da borda quando o campo está focado */
+}
+
+.search-form button {
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 18px; /* Tamanho maior da fonte */
+    margin-left: 10px; /* Espaço entre o campo de input e o botão */
+    background-color: red; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 30px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para uma mãozinha */
+}
+
+.search-form button:hover {
+    background-color: black; /* Cor de fundo ao passar o mouse */
+}
