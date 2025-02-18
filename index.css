@@ -179,3 +179,20 @@ body {
 .search-form button:hover {
     background-color: black; /* Cor de fundo ao passar o mouse */
 }
+
+/* Estilos para os preços */
+.precos {
+    display: flex;
+    justify-content: space-between; /* Para dividir os preços nas extremidades */
+    gap: 20px; /* Espaço entre os botões */
+}
+
+.novo-preco {
+    background-color: green; /* Cor diferenciada para o novo preço */
+    color: white;
+    font-weight: bold;
+}
+
+.novo-preco:hover {
+    background-color: darkgreen; /* Cor ao passar o mouse */
+}
