@@ -63,7 +63,7 @@ body {
 }
 
 .btn {
-    background-color: red;
+    background-color: green;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -188,7 +188,7 @@ body {
 }
 
 .novo-preco {
-    background-color: green; /* Cor diferenciada para o novo preço */
+    background-color: red; /* Cor diferenciada para o novo preço */
     color: white;
     font-weight: bold;
 }
